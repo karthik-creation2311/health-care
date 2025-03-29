@@ -42,7 +42,7 @@ interface CustomProps {
   fieldType: FormFieldType;
 }
 
-const RenderInput = ({ field, props }: { field: any; props: CustomProps }) => {
+const RenderInput = ({  field, props }: { field: any; props: CustomProps }) => {
   switch (props.fieldType) {
     case FormFieldType.INPUT:
       return (
@@ -80,7 +80,7 @@ const RenderInput = ({ field, props }: { field: any; props: CustomProps }) => {
       return (
         <FormControl>
           <PhoneInput
-            defaultCountry="US"
+            defaultCountry="IN"
             placeholder={props.placeholder}
             international
             withCountryCallingCode
@@ -121,7 +121,7 @@ const RenderInput = ({ field, props }: { field: any; props: CustomProps }) => {
               selected={field.value}
               onChange={(date: Date) => field.onChange(date)}
               timeInputLabel="Time:"
-              dateFormat={props.dateFormat ?? "MM/dd/yyyy"}
+              dateFormat={props.dateFormat ?? "dd/MM/yyyy"}
               wrapperClassName="date-picker"
             />
           </FormControl>
